@@ -1,0 +1,52 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Acme Corp" [level=2] [ref=e5]
+      - paragraph [ref=e6]: acme.localhost
+    - navigation [ref=e7]:
+      - link "Dashboard" [ref=e8] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/dashboard
+        - img [ref=e9]
+        - text: Dashboard
+      - link "Invoices" [ref=e11] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/invoices
+        - img [ref=e12]
+        - text: Invoices
+      - link "Products" [ref=e14] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/products
+        - img [ref=e15]
+        - text: Products
+    - generic [ref=e18]:
+      - generic [ref=e19]: John Doe
+      - button "Logout" [ref=e21] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - heading "Create Invoice" [level=1] [ref=e24]
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: Invoice Number
+            - textbox "Invoice Number" [ref=e29]: INV-6480
+          - generic [ref=e30]:
+            - generic [ref=e31]: Client Name
+            - textbox "Client Name" [ref=e32]
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: Amount ($)
+            - spinbutton "Amount ($)" [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38]: Status
+            - combobox "Status" [ref=e39]:
+              - option "Draft" [selected]
+              - option "Sent"
+              - option "Paid"
+          - generic [ref=e40]:
+            - generic [ref=e41]: Due Date
+            - textbox "Due Date" [ref=e42]: 2026-05-30
+        - generic [ref=e43]:
+          - generic [ref=e44]: Notes
+          - textbox "Notes" [ref=e45]
+        - generic [ref=e46]:
+          - button "Create Invoice" [ref=e47] [cursor=pointer]
+          - link "Cancel" [ref=e48] [cursor=pointer]:
+            - /url: http://acme.localhost:8000/invoices

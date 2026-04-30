@@ -1,0 +1,45 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "TenantERP" [ref=e5] [cursor=pointer]:
+        - /url: http://localhost:8000
+      - link "Get Started" [ref=e7] [cursor=pointer]:
+        - /url: http://localhost:8000/signup
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - heading "Your Business, Your Workspace" [level=1] [ref=e11]
+        - paragraph [ref=e12]: A multi-tenant ERP platform where each company gets its own isolated workspace with dedicated database, subdomain, and modules.
+        - link "Get Started Free" [ref=e14] [cursor=pointer]:
+          - /url: http://localhost:8000/signup
+          - text: Get Started Free
+          - img [ref=e15]
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - img [ref=e20]
+          - heading "Data Isolation" [level=3] [ref=e22]
+          - paragraph [ref=e23]: Each tenant gets a dedicated database. Your data never mixes with others.
+        - generic [ref=e24]:
+          - img [ref=e26]
+          - heading "Accounting & Invoicing" [level=3] [ref=e28]
+          - paragraph [ref=e29]: Create and manage invoices, track payments, and monitor your finances.
+        - generic [ref=e30]:
+          - img [ref=e32]
+          - heading "Inventory Management" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Track products, manage stock levels, and organize your warehouse.
+      - generic [ref=e36]:
+        - heading "How It Works" [level=2] [ref=e37]
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - generic [ref=e40]: "1"
+            - heading "Sign Up" [level=3] [ref=e41]
+            - paragraph [ref=e42]: Choose your company name and subdomain
+          - generic [ref=e43]:
+            - generic [ref=e44]: "2"
+            - heading "Auto-Provisioned" [level=3] [ref=e45]
+            - paragraph [ref=e46]: Your workspace and database are created instantly
+          - generic [ref=e47]:
+            - generic [ref=e48]: "3"
+            - heading "Start Working" [level=3] [ref=e49]
+            - paragraph [ref=e50]: Access your ERP at your-company.localhost
+  - contentinfo [ref=e51]: © 2026 TenantERP. All rights reserved.

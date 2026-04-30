@@ -1,0 +1,47 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Acme Corp" [level=2] [ref=e5]
+      - paragraph [ref=e6]: acme.localhost
+    - navigation [ref=e7]:
+      - link "Dashboard" [ref=e8] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/dashboard
+        - img [ref=e9]
+        - text: Dashboard
+      - link "Invoices" [ref=e11] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/invoices
+        - img [ref=e12]
+        - text: Invoices
+      - link "Products" [ref=e14] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/products
+        - img [ref=e15]
+        - text: Products
+    - generic [ref=e18]:
+      - generic [ref=e19]: John Doe
+      - button "Logout" [ref=e21] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e23]: Product added successfully.
+    - generic [ref=e24]:
+      - heading "Products" [level=1] [ref=e25]
+      - link "+ Add Product" [ref=e26] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/products/create
+    - table [ref=e28]:
+      - rowgroup [ref=e29]:
+        - row "Name SKU Price Quantity Category Action" [ref=e30]:
+          - columnheader "Name" [ref=e31]
+          - columnheader "SKU" [ref=e32]
+          - columnheader "Price" [ref=e33]
+          - columnheader "Quantity" [ref=e34]
+          - columnheader "Category" [ref=e35]
+          - columnheader "Action" [ref=e36]
+      - rowgroup [ref=e37]:
+        - row "Widget Pro WGT-001 $29.99 150 Electronics View" [ref=e38]:
+          - cell "Widget Pro" [ref=e39]
+          - cell "WGT-001" [ref=e40]
+          - cell "$29.99" [ref=e41]
+          - cell "150" [ref=e42]:
+            - generic [ref=e43]: "150"
+          - cell "Electronics" [ref=e44]
+          - cell "View" [ref=e45]:
+            - link "View" [ref=e46] [cursor=pointer]:
+              - /url: http://acme.localhost:8000/products/1

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:tenancyforlaravel.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(composer create-project:*)",
+      "Bash(composer require:*)",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_fill_form",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Bash(pkill -f \"artisan serve\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root -e \"SHOW DATABASES LIKE 'tenant%'; SELECT * FROM erp_central.tenants; SELECT * FROM erp_central.domains;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root -e \"SELECT id, invoice_number, client_name, amount, status FROM tenantacme.invoices; SELECT id, name, sku, price, quantity FROM tenantacme.products; SELECT COUNT\\(*\\) as invoice_count FROM tenantbeta.invoices; SELECT COUNT\\(*\\) as product_count FROM tenantbeta.products;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root -e \"SHOW TABLES FROM erp_central; SHOW TABLES FROM tenantacme;\")"
+    ]
+  }
+}

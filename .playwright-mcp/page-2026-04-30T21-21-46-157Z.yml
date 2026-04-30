@@ -1,0 +1,59 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Acme Corp" [level=2] [ref=e5]
+      - paragraph [ref=e6]: acme.localhost
+    - navigation [ref=e7]:
+      - link "Dashboard" [ref=e8] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/dashboard
+        - img [ref=e9]
+        - text: Dashboard
+      - link "Invoices" [ref=e11] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/invoices
+        - img [ref=e12]
+        - text: Invoices
+      - link "Products" [ref=e14] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/products
+        - img [ref=e15]
+        - text: Products
+    - generic [ref=e18]:
+      - generic [ref=e19]: John Doe
+      - button "Logout" [ref=e21] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - heading "Welcome to Acme Corp" [level=1] [ref=e24]
+      - paragraph [ref=e25]: "Subdomain: acme.localhost"
+    - generic [ref=e26]:
+      - link "Total Invoices 0" [ref=e27] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/invoices
+        - generic [ref=e28]:
+          - img [ref=e30]
+          - generic [ref=e32]:
+            - paragraph [ref=e33]: Total Invoices
+            - paragraph [ref=e34]: "0"
+      - link "Total Products 0" [ref=e35] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/products
+        - generic [ref=e36]:
+          - img [ref=e38]
+          - generic [ref=e40]:
+            - paragraph [ref=e41]: Total Products
+            - paragraph [ref=e42]: "0"
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Recent Invoices" [level=3] [ref=e46]
+          - link "+ New" [ref=e47] [cursor=pointer]:
+            - /url: http://acme.localhost:8000/invoices/create
+        - paragraph [ref=e49]:
+          - text: No invoices yet.
+          - link "Create one" [ref=e50] [cursor=pointer]:
+            - /url: http://acme.localhost:8000/invoices/create
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - heading "Recent Products" [level=3] [ref=e53]
+          - link "+ New" [ref=e54] [cursor=pointer]:
+            - /url: http://acme.localhost:8000/products/create
+        - paragraph [ref=e56]:
+          - text: No products yet.
+          - link "Add one" [ref=e57] [cursor=pointer]:
+            - /url: http://acme.localhost:8000/products/create

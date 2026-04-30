@@ -1,0 +1,47 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Acme Corp" [level=2] [ref=e5]
+      - paragraph [ref=e6]: acme.localhost
+    - navigation [ref=e7]:
+      - link "Dashboard" [ref=e8] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/dashboard
+        - img [ref=e9]
+        - text: Dashboard
+      - link "Invoices" [ref=e11] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/invoices
+        - img [ref=e12]
+        - text: Invoices
+      - link "Products" [ref=e14] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/products
+        - img [ref=e15]
+        - text: Products
+    - generic [ref=e18]:
+      - generic [ref=e19]: John Doe
+      - button "Logout" [ref=e21] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e23]: Invoice created successfully.
+    - generic [ref=e24]:
+      - heading "Invoices" [level=1] [ref=e25]
+      - link "+ New Invoice" [ref=e26] [cursor=pointer]:
+        - /url: http://acme.localhost:8000/invoices/create
+    - table [ref=e28]:
+      - rowgroup [ref=e29]:
+        - 'row "Invoice # Client Amount Status Due Date Action" [ref=e30]':
+          - 'columnheader "Invoice #" [ref=e31]'
+          - columnheader "Client" [ref=e32]
+          - columnheader "Amount" [ref=e33]
+          - columnheader "Status" [ref=e34]
+          - columnheader "Due Date" [ref=e35]
+          - columnheader "Action" [ref=e36]
+      - rowgroup [ref=e37]:
+        - row "INV-6480 Wayne Enterprises $5,000.00 Sent May 30, 2026 View" [ref=e38]:
+          - cell "INV-6480" [ref=e39]
+          - cell "Wayne Enterprises" [ref=e40]
+          - cell "$5,000.00" [ref=e41]
+          - cell "Sent" [ref=e42]:
+            - generic [ref=e43]: Sent
+          - cell "May 30, 2026" [ref=e44]
+          - cell "View" [ref=e45]:
+            - link "View" [ref=e46] [cursor=pointer]:
+              - /url: http://acme.localhost:8000/invoices/1

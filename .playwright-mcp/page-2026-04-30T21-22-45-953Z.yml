@@ -1,0 +1,43 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "TenantERP" [ref=e5] [cursor=pointer]:
+        - /url: http://localhost:8000
+      - link "Get Started" [ref=e7] [cursor=pointer]:
+        - /url: http://localhost:8000/signup
+  - main [ref=e8]:
+    - generic [ref=e10]:
+      - heading "Create Your Workspace" [level=2] [ref=e11]
+      - paragraph [ref=e12]: Get your own ERP workspace in seconds
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: Company Name
+          - textbox "Company Name" [ref=e16]:
+            - /placeholder: Acme Corp
+        - generic [ref=e17]:
+          - generic [ref=e18]: Choose Your Subdomain
+          - generic [ref=e19]:
+            - textbox "Choose Your Subdomain" [ref=e20]:
+              - /placeholder: acme
+            - generic [ref=e21]: .localhost
+        - separator [ref=e22]
+        - generic [ref=e23]:
+          - generic [ref=e24]: Your Full Name
+          - textbox "Your Full Name" [ref=e25]:
+            - /placeholder: John Doe
+        - generic [ref=e26]:
+          - generic [ref=e27]: Email Address
+          - textbox "Email Address" [ref=e28]:
+            - /placeholder: john@acme.com
+            - text: john@acme.com
+        - generic [ref=e29]:
+          - generic [ref=e30]: Password
+          - textbox "Password" [ref=e31]:
+            - /placeholder: Min 8 characters
+            - text: password123
+        - generic [ref=e32]:
+          - generic [ref=e33]: Confirm Password
+          - textbox "Confirm Password" [ref=e34]:
+            - /placeholder: Repeat password
+        - button "Create Workspace" [ref=e35] [cursor=pointer]
+  - contentinfo [ref=e36]: © 2026 TenantERP. All rights reserved.
