@@ -1,12 +1,11 @@
-[phases.setup]
-nixPkgs = ["php82", "php82Extensions.pdo_mysql", "php82Extensions.mysql", "nodejs_18", "npm-9_x"]
-
 [phases.build]
+dependsOn = ["install"]
 cmds = [
-    "composer install --no-dev --optimize-autoloader",
-    "npm ci && npm run build",
+    "npm run build",
     "php artisan config:cache",
-    "php artisan view:cache"
+    "php artisan view:cache",
+    "mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs bootstrap/cache",
+    "chmod -R a+rw storage"
 ]
 
 [start]
