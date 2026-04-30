@@ -5,7 +5,7 @@
 @section('content')
 <div>
     <h1 class="text-2xl font-bold text-gray-900">Welcome to {{ $tenantName }}</h1>
-    <p class="text-gray-600 mt-1">Subdomain: <span class="font-mono text-indigo-600">{{ $tenantId }}.localhost</span></p>
+    <p class="text-gray-600 mt-1">Domain: <span class="font-mono text-indigo-600">{{ request()->getHost() }}</span></p>
 </div>
 
 {{-- Stats Cards --}}

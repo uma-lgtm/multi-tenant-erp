@@ -28,10 +28,21 @@
                            class="block w-full rounded-l-lg border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
                            placeholder="acme">
                     <span class="inline-flex items-center px-3 rounded-r-lg border border-l-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
-                        .localhost
+                        .{{ config('app.platform_domain', 'localhost') }}
                     </span>
                 </div>
                 @error('subdomain')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div>
+                <label for="custom_domain" class="block text-sm font-medium text-gray-700">Custom Domain <span class="text-gray-400 font-normal">(optional)</span></label>
+                <input type="text" name="custom_domain" id="custom_domain" value="{{ old('custom_domain') }}"
+                       class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                       placeholder="erp.yourdomain.com">
+                <p class="mt-1 text-xs text-gray-500">You can also add this later from Domain Settings. DNS verification will be required.</p>
+                @error('custom_domain')
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                 @enderror
             </div>

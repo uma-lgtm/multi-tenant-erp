@@ -25,9 +25,18 @@ class SignupController extends Controller
                 Rule::notIn(['www', 'api', 'admin', 'mail', 'ftp', 'app']),
                 Rule::unique('domains', 'domain'),
             ],
+            'custom_domain' => [
+                'nullable', 'string', 'max:255',
+                'regex:/^([a-z0-9]([a-z0-9\-]*[a-z0-9])?\.)+[a-z]{2,}$/',
+                Rule::notIn(config('tenancy.central_domains', [])),
+                Rule::unique('domains', 'domain'),
+            ],
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'password' => 'required|min:8|confirmed',
+        ], [
+            'custom_domain.regex' => 'Please enter a valid domain name (e.g., erp.yourdomain.com).',
+            'custom_domain.unique' => 'This domain is already in use.',
         ]);
 
         $tenant = Tenant::create([
@@ -37,7 +46,18 @@ class SignupController extends Controller
 
         $tenant->domains()->create([
             'domain' => $request->subdomain,
+            'type' => 'subdomain',
+            'verification_status' => 'verified',
+            'verified_at' => now(),
         ]);
+
+        if ($request->filled('custom_domain')) {
+            $tenant->domains()->create([
+                'domain' => strtolower($request->custom_domain),
+                'type' => 'custom',
+                'verification_status' => 'pending',
+            ]);
+        }
 
         $tenant->run(function () use ($request) {
             $user = User::create([
@@ -52,7 +72,8 @@ class SignupController extends Controller
         $port = $request->getPort();
         $portSuffix = ($port && $port != 80 && $port != 443) ? ':' . $port : '';
         $scheme = $request->getScheme();
-        $tenantUrl = $scheme . '://' . $request->subdomain . '.localhost' . $portSuffix;
+        $platformDomain = config('app.platform_domain', 'localhost');
+        $tenantUrl = $scheme . '://' . $request->subdomain . '.' . $platformDomain . $portSuffix;
 
         return redirect($tenantUrl . '/login')
             ->with('status', 'Your workspace is ready! Please log in.');

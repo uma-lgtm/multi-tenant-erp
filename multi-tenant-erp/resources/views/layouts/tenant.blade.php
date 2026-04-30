@@ -13,7 +13,7 @@
         <aside class="w-64 bg-indigo-900 text-white min-h-screen fixed">
             <div class="p-6">
                 <h2 class="text-lg font-bold truncate">{{ tenant('name') }}</h2>
-                <p class="text-indigo-300 text-xs mt-1">{{ tenant('id') }}.localhost</p>
+                <p class="text-indigo-300 text-xs mt-1">{{ request()->getHost() }}</p>
             </div>
             <nav class="mt-2">
                 <a href="{{ route('dashboard') }}"
@@ -30,6 +30,11 @@
                    class="flex items-center px-6 py-3 text-sm hover:bg-indigo-800 transition {{ request()->routeIs('products.*') ? 'bg-indigo-800 border-r-4 border-white' : '' }}">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     Products
+                </a>
+                <a href="{{ route('domain.settings') }}"
+                   class="flex items-center px-6 py-3 text-sm hover:bg-indigo-800 transition {{ request()->routeIs('domain.*') ? 'bg-indigo-800 border-r-4 border-white' : '' }}">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    Domain Settings
                 </a>
             </nav>
             <div class="absolute bottom-0 w-full p-4 border-t border-indigo-800">
