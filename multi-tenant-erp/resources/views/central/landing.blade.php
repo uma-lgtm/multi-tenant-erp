@@ -12,7 +12,7 @@
             A multi-tenant ERP platform where each company gets its own isolated workspace with dedicated database, subdomain, and modules.
         </p>
         <div class="mt-10">
-            <a href="{{ route('signup') }}"
+            <a href="/signup"
                class="inline-flex items-center px-8 py-4 bg-indigo-600 text-white text-lg font-semibold rounded-xl hover:bg-indigo-700 shadow-lg hover:shadow-xl transition">
                 Get Started Free
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
@@ -62,7 +62,7 @@
             <div>
                 <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto text-lg font-bold">3</div>
                 <h3 class="mt-4 font-semibold text-gray-900">Start Working</h3>
-                <p class="mt-2 text-gray-600">Access your ERP at your-company.localhost</p>
+                <p class="mt-2 text-gray-600">Access your ERP at your-company.{{ config('app.platform_domain', 'localhost') }}</p>
             </div>
         </div>
     </div>

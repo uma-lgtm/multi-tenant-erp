@@ -8,7 +8,7 @@
         <h2 class="text-2xl font-bold text-gray-900 text-center">Create Your Workspace</h2>
         <p class="mt-2 text-gray-600 text-center text-sm">Get your own ERP workspace in seconds</p>
 
-        <form method="POST" action="{{ route('signup.store') }}" class="mt-8 space-y-5">
+        <form method="POST" action="/signup" class="mt-8 space-y-5">
             @csrf
 
             <div>

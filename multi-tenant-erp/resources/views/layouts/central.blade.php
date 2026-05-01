@@ -10,9 +10,9 @@
     <nav class="bg-white shadow-sm border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <a href="{{ route('landing') }}" class="text-xl font-bold text-indigo-600">TenantERP</a>
+                <a href="/" class="text-xl font-bold text-indigo-600">TenantERP</a>
                 <div class="flex gap-4">
-                    <a href="{{ route('signup') }}" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition">
+                    <a href="/signup" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition">
                         Get Started
                     </a>
                 </div>
