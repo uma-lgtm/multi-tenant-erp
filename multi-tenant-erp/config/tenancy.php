@@ -15,10 +15,12 @@ return [
      *
      * Only relevant if you're using the domain or subdomain identification middleware.
      */
-    'central_domains' => [
+    'central_domains' => array_filter([
+        env('APP_PLATFORM_DOMAIN', 'localhost'),
+        env('RAILWAY_PUBLIC_DOMAIN'),
         '127.0.0.1',
         'localhost',
-    ],
+    ]),
 
     /**
      * Tenancy bootstrappers are executed when tenancy is initialized.
